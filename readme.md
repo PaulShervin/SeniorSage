@@ -1,10 +1,8 @@
-# 🚀 SeniorSage – AI Powered College Guidance & Mentorship Platform
+# SeniorSage – AI Powered College Guidance & Mentorship Platform
 
-SeniorSage is a centralized mentorship platform that connects school students (Juniors) with verified college seniors using AI-powered recommendations, smart search, real-time messaging, and structured forums.
+SeniorSage is a centralized mentorship platform that connects school students (juniors) with verified college seniors using AI-powered recommendations, smart search, real-time messaging, and structured forums.
 
----
-
-# 📌 Table of Contents
+## Table of Contents
 
 - Overview
 - Features
@@ -15,10 +13,9 @@ SeniorSage is a centralized mentorship platform that connects school students (J
 - Security
 - Installation
 - Future Enhancements
+- Author
 
----
-
-# 📖 Overview
+## Overview
 
 SeniorSage solves the problem of fragmented and unreliable college guidance by providing:
 
@@ -28,195 +25,125 @@ SeniorSage solves the problem of fragmented and unreliable college guidance by p
 - College-specific forums
 - Secure and scalable system
 
----
+## Features
 
-# ✨ Features
+- Authentication system
+- Role-based access control
+- Profile management
+- Smart senior search
+- AI-powered recommendations
+- Real-time chat system
+- Forum system
+- College search system
+- Secure backend APIs
 
-✔ Authentication System
-✔ Role-Based Access Control
-✔ Profile Management
-✔ Smart Senior Search
-✔ AI-Powered Recommendation
-✔ Real-Time Chat System
-✔ Forum System
-✔ College Search System
-✔ Secure Backend APIs
+## Feature Details
 
+### 1) Authentication System
 
----
+**Description:** Secure login and registration using JWT authentication.
 
-# 🧩 Feature Details
+**Features:**
+- User registration
+- User login
+- JWT token generation
+- Secure authentication
 
----
+**API:**
+- `POST /api/auth/login`
+- `POST /api/users/register`
 
-## 🔐 1. Authentication System
+### 2) Role-Based Access Control
 
-### Description
-Secure login and registration using JWT authentication.
+**Roles:**
 
-### Features
+**JUNIOR**
+- Search seniors
+- View profiles
+- Chat with seniors
+- Comment on posts
 
-```
-• User Registration
-• User Login
-• JWT Token Generation
-• Secure Authentication
-```
+**SENIOR**
+- Create posts
+- Reply to juniors
+- Manage profile
+- Provide mentorship
 
-### API
+### 3) Profile Management
 
-```
-POST /api/auth/login
-POST /api/users/register
-```
+**Features:**
+- Create profile
+- Update profile
+- Upload profile image
+- View profile
 
----
+**API:**
+- `GET /api/users/profile`
+- `PUT /api/users/profile`
+- `POST /api/users/profile/image`
 
-## 👤 2. Role-Based Access Control
+### 4) Smart Senior Search
 
-### Roles
+**Features:**
+- Search by college
+- Search by branch
+- Search by course
+- Search by location
 
-```
-JUNIOR:
-• Search seniors
-• View profiles
-• Chat with seniors
-• Comment on posts
+**Purpose:** Helps juniors find relevant seniors easily.
 
-SENIOR:
-• Create posts
-• Reply to juniors
-• Manage profile
-• Provide mentorship
-```
+### 5) AI-Powered Recommendation System
 
----
+**Features:**
+- AI analyzes junior preferences
+- Recommends best matching seniors
+- Uses Gemini AI
+- Vector search support (planned)
 
-## 🧑‍💼 3. Profile Management
+### 6) Real-Time Chat System
 
-### Features
+**Features:**
+- Send message
+- Receive message
+- Chat history
+- Real-time communication
 
-```
-• Create profile
-• Update profile
-• Upload profile image
-• View profile
-```
+**API:**
+- `POST /api/chat/send`
+- `GET /api/chat/history/{userId}`
 
-### API
+### 7) Forum System (Core Feature)
 
-```
-GET /api/users/profile
-PUT /api/users/profile
-POST /api/users/profile/image
-```
+**Senior permissions:**
+- Create posts
+- Share experiences
+- Provide guidance
 
----
+**Junior permissions:**
+- View posts
+- Comment on posts
+- Like posts
 
-## 🔍 4. Smart Senior Search
+**API:**
+- `POST /api/forums`
+- `POST /api/forums/{forumId}/posts`
+- `POST /api/forums/posts/{postId}/comments`
 
-### Features
+### 8) College Search System
 
-```
-• Search by college
-• Search by branch
-• Search by course
-• Search by location
-```
+**Features:**
+- Search colleges
+- Filter by name
+- Filter by city
+- Filter by course
 
-### Purpose
+**API:**
+- `GET /api/colleges/search`
 
-```
-Helps juniors find relevant seniors easily.
-```
+## System Workflow
 
----
-
-## 🤖 5. AI-Powered Recommendation System
-
-### Features
-
-```
-• AI analyzes junior preferences
-• Recommends best matching seniors
-• Uses Gemini AI
-• Vector search support (planned)
-```
-
----
-
-## 💬 6. Real-Time Chat System
-
-### Features
-
-```
-• Send message
-• Receive message
-• Chat history
-• Real-time communication
-```
-
-### API
-
-```
-POST /api/chat/send
-GET /api/chat/history/{userId}
-```
-
----
-
-## 🧵 7. Forum System (Core Feature)
-
-### Senior Permissions
-
-```
-• Create posts
-• Share experiences
-• Provide guidance
-```
-
-### Junior Permissions
-
-```
-• View posts
-• Comment on posts
-• Like posts
-```
-
-### API
-
-```
-POST /api/forums
-POST /api/forums/{forumId}/posts
-POST /api/forums/posts/{postId}/comments
-```
-
----
-
-## 🏫 8. College Search System
-
-### Features
-
-```
-• Search colleges
-• Filter by name
-• Filter by city
-• Filter by course
-```
-
-### API
-
-```
-GET /api/colleges/search
-```
-
----
-
-# 🔄 System Workflow
-
-```
 1. User registers
-2. User selects role (Junior / Senior)
+2. User selects role (Junior or Senior)
 3. User creates profile
 4. Junior searches seniors
 5. AI recommends seniors
@@ -224,116 +151,92 @@ GET /api/colleges/search
 7. Junior starts chat
 8. Senior responds
 9. Users participate in forums
-```
 
----
+## Tech Stack
 
-# 🛠 Tech Stack
+**Frontend**
+- React.js
+- HTML
+- CSS
+- JavaScript
 
-## Frontend
-```
-React.js
-HTML
-CSS
-JavaScript
-```
+**Backend**
+- Spring Boot
+- Java
+- REST APIs
 
-## Backend
-```
-Spring Boot
-Java
-REST APIs
-```
+**Database**
+- MySQL
 
-## Database
-```
-MySQL
-```
+**AI**
+- Gemini AI
+- Vector search (planned)
 
-## AI
-```
-Gemini AI
-Vector Search (planned)
-```
+**Security**
+- Spring Security
+- JWT authentication
+
+**Communication**
+- WebSocket
+
+## API Endpoints
+
+**Authentication**
+- `POST /api/auth/login`
+- `POST /api/users/register`
+
+**User**
+- `GET /api/users/profile`
+- `PUT /api/users/profile`
+- `POST /api/users/profile/image`
+
+**Chat**
+- `POST /api/chat/send`
+- `GET /api/chat/history/{userId}`
+
+**Forum**
+- `POST /api/forums`
+- `POST /api/forums/{forumId}/posts`
+- `POST /api/forums/posts/{postId}/comments`
+
+**Colleges**
+- `GET /api/colleges/search`
 
 ## Security
-```
-Spring Security
-JWT Authentication
-```
 
-## Communication
-```
-WebSocket
-```
+- JWT authentication
+- Role-based authorization
+- Secure APIs
+- Protected endpoints
+- Encrypted data
 
----
+## Installation
 
-# 🔗 API Endpoints
-
-## Authentication
-```
-POST /api/auth/login
-POST /api/users/register
-```
-
-## User
-```
-GET /api/users/profile
-PUT /api/users/profile
-POST /api/users/profile/image
-```
-
-## Chat
-```
-POST /api/chat/send
-GET /api/chat/history/{userId}
-```
-
-## Forum
-```
-POST /api/forums
-POST /api/forums/{forumId}/posts
-POST /api/forums/posts/{postId}/comments
-```
-
-## Colleges
-```
-GET /api/colleges/search
-```
-
----
-
-# 🔒 Security Features
-
-```
-• JWT Authentication
-• Role-Based Authorization
-• Secure APIs
-• Protected Endpoints
-• Encrypted Data
-```
-
----
-
-# ⚙ Installation
-
-## Backend
+### Backend
 
 ```bash
 git clone https://github.com/your-repo/seniorsage.git
 cd backend
 mvn spring-boot:run
-Frontend
+```
+
+### Frontend
+
+```bash
 cd frontend
 npm install
 npm start
-🚀 Future Enhancements
-• AI Chatbot Mentor
-• Internship mentorship
-• Alumni mentorship
-• Mobile Application
-• Advanced AI Matching
-👨‍💻 Author
+```
+
+## Future Enhancements
+
+- AI chatbot mentor
+- Internship mentorship
+- Alumni mentorship
+- Mobile application
+- Advanced AI matching
+
+## Author
+
 Team DevMatrix
 SeniorSage Project
